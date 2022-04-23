@@ -14,8 +14,9 @@ namespace ListasDoblementeLigadas
 
         public Nodo(Nodo enlaceA = null, string valor = "", Nodo enlaceB = null)
         {
+            
+            EnlaceA = enlaceA;
             Valor = valor;
-            EnlaceA = enlaceA; 
             EnlaceB = enlaceB;
         }
     }
