@@ -11,11 +11,19 @@ namespace ListasDoblementeLigadas
         Nodo nodoAnterior;
         Nodo nodoInicial;
         Nodo nodoSiguiente;
+        Nodo nodoActual;
 
         public Lista()
         {
             nodoInicial = new Nodo();
         }
-        
+        public bool ValidaVacio()
+        {
+            if (nodoInicial.EnlaceB == null)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
