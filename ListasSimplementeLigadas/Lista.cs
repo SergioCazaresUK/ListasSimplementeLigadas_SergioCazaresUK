@@ -33,29 +33,23 @@ namespace ListasSimplementeLigadas
         public string RecorrerLista()
         {
             string valores = string.Empty;
-
             nodoActual = nodoInicial;
-
             while (nodoActual.Enlace != null)
             {
                 nodoActual = nodoActual.Enlace;
                 valores += $"{nodoActual.Valor}\n";
             }
-
             return valores;
         }
 
         public void AgregarNodo(string valor)
         {
             nodoActual = nodoInicial;
-
             while (nodoActual.Enlace != null)
             {
                 nodoActual = nodoActual.Enlace;
             }
-
             Nodo nuevoNodo = new Nodo(valor);
-
             nodoActual.Enlace = nuevoNodo;
         }
 
@@ -71,41 +65,34 @@ namespace ListasSimplementeLigadas
             if (ValidaVacio() == false)
             {
                 Nodo nodoBusqueda = nodoInicial;
-
                 while (nodoBusqueda.Enlace != null)
                 {
                     nodoBusqueda = nodoBusqueda.Enlace;
-
                     if (nodoBusqueda.Valor == valor)
                     {
                         return nodoBusqueda;
                     }
                 }
             }
-
             return null;
         }
 
         public Nodo BuscarPorIndice(int indice)
         {
             int Indice = -1;
-
             if (ValidaVacio() == false)
             {
                 Nodo nodoBusqueda = nodoInicial;
-
                 while (nodoBusqueda.Enlace != null)
                 {
                     nodoBusqueda = nodoBusqueda.Enlace;
                     Indice++;
-
                     if (Indice == indice)
                     {
                         return nodoBusqueda;
                     }
                 }
             }
-
             return null;
         }
 
@@ -114,7 +101,6 @@ namespace ListasSimplementeLigadas
             if (ValidaVacio() == false)
             {
                 Nodo nodoBusqueda = nodoInicial;
-
                 while (nodoBusqueda.Enlace != null
                             && nodoBusqueda.Enlace.Valor != valor)
                 {
