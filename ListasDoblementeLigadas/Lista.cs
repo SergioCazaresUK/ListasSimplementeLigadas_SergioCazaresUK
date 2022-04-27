@@ -51,9 +51,9 @@ namespace ListasDoblementeLigadas
             if (ValidaVacio() == false)
             {
                 Nodo nodoBusqueda = nodoInicial;
-                while (nodoBusqueda.Enlace != null)
+                while (nodoBusqueda.EnlaceB != null)
                 {
-                    nodoBusqueda = nodoBusqueda.Enlace;
+                    nodoBusqueda = nodoBusqueda.EnlaceB;
                     if (nodoBusqueda.Valor == valor)
                     {
                         return nodoBusqueda;
