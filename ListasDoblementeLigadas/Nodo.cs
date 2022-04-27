@@ -19,5 +19,10 @@ namespace ListasDoblementeLigadas
             Valor = valor;
             EnlaceB = enlaceB;
         }
+
+        public Nodo(string valor)
+        {
+            Valor = valor;
+        }
     }
 }
