@@ -62,5 +62,23 @@ namespace ListasDoblementeLigadas
             }
             return null;
         }
+        public Nodo BuscarPorIndice(int indice)
+        {
+            int Indice = -1;
+            if (ValidaVacio() == false)
+            {
+                Nodo nodoBusqueda = nodoInicial;
+                while (nodoBusqueda.Enlace != null)
+                {
+                    nodoBusqueda = nodoBusqueda.Enlace;
+                    Indice++;
+                    if (Indice == indice)
+                    {
+                        return nodoBusqueda;
+                    }
+                }
+            }
+            return null;
+        }
     }
 }
